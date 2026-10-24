@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { EDITOR_PROFILE } from '@/data/portfolioData';
 import { Film, Volume2, VolumeX, Menu, X, ArrowUpRight } from 'lucide-react';
 
@@ -11,6 +12,7 @@ interface NavbarProps {
 }
 
 export default function Navbar({ isMuted, onToggleMute }: NavbarProps) {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [timecode, setTimecode] = useState('01:00:00:00');
@@ -43,13 +45,11 @@ export default function Navbar({ isMuted, onToggleMute }: NavbarProps) {
   }, []);
 
   const navLinks = [
-    { label: 'SHOWCASE', href: '#showcase' },
-    { label: 'WORK', href: '#work' },
-    { label: 'SHOWREEL', href: '#showreel' },
-    { label: 'ABOUT', href: '#about' },
-    { label: 'SERVICES', href: '#services' },
-    { label: 'PROCESS', href: '#process' },
-    { label: 'CONTACT', href: '#contact' },
+    { label: 'HOME', href: '/' },
+    { label: 'WORK', href: '/work' },
+    { label: 'ABOUT', href: '/about' },
+    { label: 'SERVICES', href: '/services' },
+    { label: 'CONTACT', href: '/contact' },
   ];
 
   return (
@@ -80,15 +80,22 @@ export default function Navbar({ isMuted, onToggleMute }: NavbarProps) {
 
           {/* Center Navigation Links (Desktop) */}
           <nav className="hidden md:flex items-center gap-1 lg:gap-2">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="px-3 py-1.5 text-xs font-semibold tracking-wider text-zinc-300 hover:text-white hover:bg-zinc-800/60 rounded-md transition-all uppercase"
-              >
-                {link.label}
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`px-3 py-1.5 text-xs font-semibold tracking-wider rounded-md transition-all uppercase ${
+                    isActive
+                      ? 'text-amber-400 bg-zinc-800/80 shadow-inner font-bold'
+                      : 'text-zinc-300 hover:text-white hover:bg-zinc-800/60'
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </nav>
 
           {/* Right actions: Timecode, Mute toggle & CTA */}
@@ -178,26 +185,33 @@ export default function Navbar({ isMuted, onToggleMute }: NavbarProps) {
           </div>
 
           <nav className="flex flex-col gap-2 py-6">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="px-4 py-3 text-lg font-bold tracking-wider text-zinc-300 hover:text-amber-400 hover:bg-zinc-900/60 rounded-lg transition-colors uppercase"
-              >
-                {link.label}
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`px-4 py-3 text-lg font-bold tracking-wider rounded-lg transition-colors uppercase ${
+                    isActive
+                      ? 'text-amber-400 bg-zinc-900 font-black border border-zinc-800'
+                      : 'text-zinc-300 hover:text-amber-400 hover:bg-zinc-900/60'
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </nav>
 
           <div className="mt-auto pt-6 border-t border-zinc-800 flex flex-col gap-3">
-            <a
-              href="#contact"
+            <Link
+              href="/contact"
               onClick={() => setMobileMenuOpen(false)}
               className="w-full py-3.5 bg-amber-500 hover:bg-amber-400 text-black font-extrabold text-center text-sm uppercase tracking-wider rounded-lg transition-all"
             >
               LET&apos;S CREATE SOMETHING
-            </a>
+            </Link>
             <div className="text-center text-xs font-mono text-zinc-500">
               {EDITOR_PROFILE.location}
             </div>

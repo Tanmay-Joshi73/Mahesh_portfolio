@@ -35,23 +35,21 @@ export default function ContactSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-        {/* Section Header */}
-        <div className="max-w-3xl mb-16">
-          <div className="flex items-center gap-2 mb-3">
-            <span className="w-2 h-2 rounded-full bg-amber-500" />
-            <span className="text-xs font-mono tracking-widest text-amber-400 uppercase">
-              LET&apos;S COLLABORATE
+        {/* Section Header with Social-First Badge Styling */}
+        <div className="max-w-4xl mb-16">
+          <div className="flex items-center gap-2 mb-4">
+            <span className="w-2.5 h-2.5 rounded-full bg-[#ccff00] animate-pulse" />
+            <span className="text-xs font-mono tracking-widest text-[#ccff00] uppercase font-bold">
+              ACCEPTING NEW PROJECTS FOR 2025/2026
             </span>
           </div>
 
-          <h2 className="text-4xl sm:text-6xl font-black text-white tracking-tight uppercase leading-[0.95]">
-            HAVE A STORY <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200">
-              WORTH TELLING?
-            </span>
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.3] sm:leading-[1.25]">
+            Creating <span className="inline-block bg-[#2b26fe] text-white px-2.5 sm:px-4 py-0.5 sm:py-1 rounded-md sm:rounded-lg font-black shadow-[0_0_30px_rgba(43,38,254,0.4)] transform hover:-rotate-1 transition-transform">social-first</span> videos for the <br className="hidden sm:inline" />
+            <span className="inline-block bg-[#e92b7b] text-white px-2.5 sm:px-4 py-0.5 sm:py-1 rounded-md sm:rounded-lg font-black shadow-[0_0_30px_rgba(233,43,123,0.4)] transform hover:rotate-1 transition-transform">next-gen</span> of <span className="inline-block bg-[#ccff00] text-black px-2.5 sm:px-4 py-0.5 sm:py-1 rounded-md sm:rounded-lg font-black shadow-[0_0_30px_rgba(204,255,0,0.4)] transform hover:scale-105 transition-transform">rising brands</span>
           </h2>
-          <p className="mt-4 text-base sm:text-xl text-zinc-300 leading-relaxed">
-            &ldquo;Let&apos;s turn your footage into something people remember.&rdquo; Currently booking select commercial campaigns, music videos, and film projects.
+          <p className="mt-5 text-base sm:text-lg text-zinc-300 leading-relaxed max-w-2xl font-normal">
+            Boutique agility, viral-ready retention pacing, and 1-on-1 direct creative collaboration — without the bloated agency price tag. Let&apos;s build your next cut.
           </p>
         </div>
 
@@ -88,7 +86,7 @@ export default function ContactSection() {
 
               {/* WhatsApp Quick Chat Card */}
               <a
-                href={`https://wa.me/15553492810?text=Hi%Mahesh,%20I%20saw%20your%20video%20editor%20portfolio%20and%20would%20love%20to%20discuss%20a%20project.`}
+                href={`https://wa.me/15553492810?text=Hi%20Mahesh,%20I%20saw%20your%20video%20editor%20portfolio%20and%20would%20love%20to%20discuss%20a%20project.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group p-6 rounded-2xl bg-zinc-950 border border-zinc-800 hover:border-emerald-500/60 transition-all flex items-start justify-between shadow-xl cursor-pointer"

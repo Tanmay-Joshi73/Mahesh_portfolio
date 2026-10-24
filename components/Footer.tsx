@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { EDITOR_PROFILE } from '@/data/portfolioData';
 import { Film, ArrowUp } from 'lucide-react';
 
@@ -26,13 +27,11 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-wrap items-center gap-6">
-            <a href="#showcase" className="hover:text-amber-400 transition-colors uppercase">SHOWCASE</a>
-            <a href="#work" className="hover:text-amber-400 transition-colors uppercase">WORK</a>
-            <a href="#showreel" className="hover:text-amber-400 transition-colors uppercase">SHOWREEL</a>
-            <a href="#about" className="hover:text-amber-400 transition-colors uppercase">ABOUT</a>
-            <a href="#services" className="hover:text-amber-400 transition-colors uppercase">SERVICES</a>
-            <a href="#process" className="hover:text-amber-400 transition-colors uppercase">PROCESS</a>
-            <a href="#contact" className="hover:text-amber-400 transition-colors uppercase">CONTACT</a>
+            <Link href="/" className="hover:text-amber-400 transition-colors uppercase">HOME</Link>
+            <Link href="/work" className="hover:text-amber-400 transition-colors uppercase">WORK</Link>
+            <Link href="/about" className="hover:text-amber-400 transition-colors uppercase">ABOUT</Link>
+            <Link href="/services" className="hover:text-amber-400 transition-colors uppercase">SERVICES</Link>
+            <Link href="/contact" className="hover:text-amber-400 transition-colors uppercase">CONTACT</Link>
           </div>
 
           <button
