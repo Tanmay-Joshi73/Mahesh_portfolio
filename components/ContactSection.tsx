@@ -34,7 +34,7 @@ export default function ContactSection() {
       <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-amber-500/10 rounded-full blur-[160px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
           <div className="flex items-center gap-2 mb-3">
@@ -57,11 +57,11 @@ export default function ContactSection() {
 
         {/* 2-Column Layout: Direct Contact Info & Inquiry Form */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
-          
+
           {/* Left Column: Direct Inquiries & Socials */}
           <div className="lg:col-span-5 flex flex-col justify-between gap-8">
             <div className="space-y-6">
-              
+
               {/* Email Direct Action Card */}
               <a
                 href={`mailto:${EDITOR_PROFILE.contacts.email}?subject=Project%20Inquiry%20via%20Portfolio`}
@@ -88,7 +88,7 @@ export default function ContactSection() {
 
               {/* WhatsApp Quick Chat Card */}
               <a
-                href={`https://wa.me/15553492810?text=Hi%20Andy,%20I%20saw%20your%20video%20editor%20portfolio%20and%20would%20love%20to%20discuss%20a%20project.`}
+                href={`https://wa.me/15553492810?text=Hi%Mahesh,%20I%20saw%20your%20video%20editor%20portfolio%20and%20would%20love%20to%20discuss%20a%20project.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group p-6 rounded-2xl bg-zinc-950 border border-zinc-800 hover:border-emerald-500/60 transition-all flex items-start justify-between shadow-xl cursor-pointer"
@@ -144,7 +144,7 @@ export default function ContactSection() {
           {/* Right Column: Project Inquiry Form */}
           <div className="lg:col-span-7">
             <div className="p-8 sm:p-10 rounded-3xl bg-zinc-950 border border-zinc-800 shadow-2xl relative">
-              
+
               {submitted ? (
                 <div className="py-12 flex flex-col items-center justify-center text-center animate-in fade-in duration-300">
                   <div className="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mb-4">

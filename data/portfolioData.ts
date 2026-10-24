@@ -56,8 +56,8 @@ export interface Testimonial {
 }
 
 export const EDITOR_PROFILE = {
-  name: "ANDY YOUNG",
-  preferredName: "Andy Young",
+  name: "Mahesh",
+  preferredName: "Mahesh",
   title: "FILM / TV & COMMERCIAL EDITOR",
   tagline: "I MAKE EVERY FRAME MEAN SOMETHING.",
   subTagline: "Video Editor & Visual Storyteller crafting films that make people feel something.",
@@ -82,7 +82,7 @@ export const EDITOR_PROFILE = {
     { name: "Frame.io", category: "Client Collaboration" },
   ],
   contacts: {
-    email: "andy.young.edits@gmail.com",
+    email: "Mahesh@gmail.com",
     whatsapp: "+1 (555) 349-2810",
     instagram: "https://instagram.com",
     youtube: "https://youtube.com",
@@ -444,7 +444,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: "1",
-    quote: "Andy is one of those rare editors who understands emotional subtext before you even explain it. He took 8 hours of chaotic multicam footage and turned it into a breathtaking 2-minute commercial that brought our client to tears.",
+    quote: "Mahesh is one of those rare editors who understands emotional subtext before you even explain it. He took 8 hours of chaotic multicam footage and turned it into a breathtaking 2-minute commercial that brought our client to tears.",
     author: "Marcus Vance",
     role: "Commercial Director",
     company: "Vance & Co. Studios",
@@ -460,7 +460,7 @@ export const TESTIMONIALS: Testimonial[] = [
   },
   {
     id: "3",
-    quote: "Working with Andy on Frame.io is effortless. Fast turnarounds, incredible attention to sound design, and he always offers creative solutions when a scene isn't working.",
+    quote: "Working with Mahesh on Frame.io is effortless. Fast turnarounds, incredible attention to sound design, and he always offers creative solutions when a scene isn't working.",
     author: "Devon Chen",
     role: "Executive Producer",
     company: "Apex Media Group",

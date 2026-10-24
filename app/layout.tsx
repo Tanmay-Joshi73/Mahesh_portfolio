@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ANDY YOUNG — Film & Commercial Video Editor | Director's Portfolio",
+  title: "Mahesh — Film & Commercial Video Editor | Director's Portfolio",
   description:
     "Award-winning video editor and visual storyteller crafting commercial films, music videos, and festival narratives that make people feel something. Specializing in Premiere Pro, DaVinci Resolve ACES color, and sound design.",
   keywords: [
@@ -23,10 +23,10 @@ export const metadata: Metadata = {
     "DaVinci Resolve Colorist",
     "Premiere Pro",
     "Film Post-Production",
-    "Andy Young Editor"
+    "Mahesh Young Editor"
   ],
   openGraph: {
-    title: "ANDY YOUNG — Cinematic Video Editor Portfolio",
+    title: "Mahesh YOUNG — Cinematic Video Editor Portfolio",
     description: "I make every frame mean something. Explore selected commercial, music video, and festival cuts.",
     type: "website",
   },
